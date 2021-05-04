@@ -1,0 +1,30 @@
+@extends('layout.home')
+@section('content')
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>bod</th>
+            <th>email</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>bod</th>
+            <th>email</th>
+        </tr>
+        </tfoot>
+        <tbody>
+        @foreach($products as $key=>$product)
+            <tr>
+                <th>{{$key+1}}</th>
+            <tr>{{$product->name}}</tr>
+            <tr>{{$product->bod}}</tr>
+            <tr>{{$product->email}}</tr>
+            </tr>
+        @endforeach
+        </tbody>
+@endsection
